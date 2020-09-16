@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #4a3aab;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  border-bottom: 1px dotted blue;
+  transition: all .3s ease-in-out;
+}
+
+a:hover {
+  color: red;
+  text-shadow: black;
+}
+
+header,
+footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+main {
+  background-color: #4a3aab;
+  background: url(https://images.robertharding.com/preview/RF/TI/HORIZONTAL/1178-20100.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blur-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(10px);
+  filter: url(#blur-filter);
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.resume {
+  padding: 150px 50px;
+  font-size: 16px;
+  font-family: cursive, sans-serif;
+}
+
+.resume-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  height: 300px;
+  border-radius: 35px;
+  overflow: hidden;
+  position: relative;
+}
+
+.resume-photo {
+  align-self: baseline;
+}
+
+.resume-info-items {
+  padding: 0 15px 0 35px;
+}
+
+.resume-info-items ul {
+  margin-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .resume-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .resume-photo {
+    align-self: unset;
+  }
+}
+
+@media (max-width: 415px) {
+  .resume-wrapper {
+    padding-top: 0px;
+  }
+
+  .resume {
+    font-size: 14px;
+  }
+
+  .resume-info-items {
+    margin-top: 10px;
+  }
+}
